@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Media App!"
       redirect_to @user
     else
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
+    # セキュリティが向上する
     params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end
