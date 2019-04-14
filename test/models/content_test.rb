@@ -41,4 +41,8 @@ class ContentTest < ActiveSupport::TestCase
     assert_not @content.valid?
   end
 
+  test "order should be most recent first" do
+    assert_equal contents(:most_recent), Content.first
+  end
+
 end

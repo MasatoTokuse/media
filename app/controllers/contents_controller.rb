@@ -5,8 +5,17 @@ class ContentsController < ApplicationController
   end
 
   def create
-    # @content = Content.new(content_params)
-    render 'new'
+    if current_user
+      @content = @current_user.contents.build(content_params)
+      if @content.save
+        flash[:success] = "記事を投稿しました"
+        redirect_to root_url
+      else
+        render 'new'
+      end
+    else
+      redirect_to login_path
+    end
   end
 
   def list
@@ -16,7 +25,7 @@ class ContentsController < ApplicationController
 
   def content_params
     # requireで必要分だけ使用可能にすることでセキュリティが向上する
-    # params.require(:content).permit(:title, :content)
+    params.require(:content).permit(:title, :text)
   end
 
 end

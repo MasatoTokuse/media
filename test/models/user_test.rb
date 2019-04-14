@@ -71,4 +71,12 @@ class UserTest < ActiveSupport::TestCase
     @user.password = @user.password_confirmation = "a" * 5
     assert_not @user.valid?
   end
+
+  test "ユーザーが削除されたらユーザーの記事は削除される" do
+    @user.save
+    @user.contents.create!(title: "title", text: "text")
+    assert_difference 'Content.count', -1 do
+      @user.destroy
+    end
+  end
 end
