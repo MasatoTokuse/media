@@ -18,7 +18,8 @@ class ContentsController < ApplicationController
     end
   end
 
-  def list
+  def index
+    @contents = Content.paginate(page: params[:page], per_page: 10, total_entries: Content.all.count)
   end
 
   private
