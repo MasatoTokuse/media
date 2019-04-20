@@ -22,6 +22,10 @@ class ContentsController < ApplicationController
     @contents = Content.paginate(page: params[:page], per_page: 10, total_entries: Content.all.count)
   end
 
+  def show 
+    @content = Content.find(params[:id])
+  end
+
   private
 
   def content_params

@@ -6,6 +6,7 @@ $gray-medium-light: #eaeaea;
 $gray-darker:#222;
 $gray:#555;
 $gray-light:#777;
+$gray-superlight:#999;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -176,5 +177,22 @@ input {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+/* content */
+.content {
+  margin-top: 50px;
+  padding-left: 10%;
+  .title {
+    width: 80%;
+    font-size: 200%;
+  }
+  .text {
+    margin-top: 10px;
+    width: 80%;
+    border-top: solid 1px $gray-superlight;
+    border-bottom: solid 1px $gray-superlight;
+    line-height: 200%;
   }
 }
