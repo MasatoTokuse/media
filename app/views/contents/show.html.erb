@@ -1,5 +1,8 @@
 <% provide(:title, "Detail") %>
 <div class="content">
+    <% if @content.image.url %>
+        <%= image_tag @content.image.url %>
+    <% end %>
     <div class="title">
     <%= @content.title %>
     </div>

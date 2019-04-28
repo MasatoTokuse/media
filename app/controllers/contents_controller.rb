@@ -30,7 +30,7 @@ class ContentsController < ApplicationController
 
   def content_params
     # requireで必要分だけ使用可能にすることでセキュリティが向上する
-    params.require(:content).permit(:title, :text)
+    params.require(:content).permit(:title, :text, :image)
   end
 
 end
