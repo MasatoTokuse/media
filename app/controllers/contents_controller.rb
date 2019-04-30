@@ -23,7 +23,11 @@ class ContentsController < ApplicationController
   end
 
   def show 
-    @content = Content.find(params[:id])
+    if Content.exists?(:id => params[:id])
+      @content = Content.find(params[:id])
+    else
+      redirect_to root_path
+    end
   end
 
   private
