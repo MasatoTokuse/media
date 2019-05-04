@@ -1,7 +1,10 @@
 <% provide(:title, "Detail") %>
 <div class="content">
+    <% if content_author @content %>
+        <div><%= link_to("編集", edit_content_path(@content)) %></div>
+    <% end %>
     <% if @content.image.url %>
-        <%= image_tag @content.image.url %>
+        <div><%= image_tag @content.image.url %></div>
     <% end %>
     <div class="title">
     <%= @content.title %>

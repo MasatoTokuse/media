@@ -1,19 +1,23 @@
 shootingstar:
   title: "Shooting star is cool"
-  text: "Right?"
+  text: "Shooting star is ..."
   created_at: <%= 10.minutes.ago %>
+  user: masato
 
 blackhole:
   title: "Blackhole is cool"
-  text: "Right?"
+  text: "Blackhole is..."
   created_at: <%= 3.years.ago %>
+  user: masato
 
 galaxy:
   title: "Galaxy is cool"
-  text: "Right?"
+  text: "Galaxy is..."
   created_at: <%= 2.hours.ago %>
+  user: masato
 
 most_recent:
   title: "Cosmos is cool"
-  text: "Right?"
+  text: "Cosmos is..."
   created_at: <%= Time.zone.now %>
+  user: masato
