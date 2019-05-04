@@ -1,4 +1,5 @@
 class ContentsController < ApplicationController
+  before_action :logged_in_user,   only: [:new, :create, :edit, :update, :destroy]
 
   def new
     @content = Content.new
@@ -30,11 +31,23 @@ class ContentsController < ApplicationController
     end
   end
 
-  private
+  def edit
 
-  def content_params
-    # requireで必要分だけ使用可能にすることでセキュリティが向上する
-    params.require(:content).permit(:title, :text, :image)
   end
+
+  def update
+
+  end
+
+  def destroy
+
+  end
+
+    private
+
+    def content_params
+      # requireで必要分だけ使用可能にすることでセキュリティが向上する
+      params.require(:content).permit(:title, :text, :image)
+    end
 
 end
