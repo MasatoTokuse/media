@@ -1,23 +1,3 @@
 <% provide(:title, "Change") %>
 <h1>記事編集</h1>
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <%= form_for(@content, url:post_path) do |f| %>
-      <%= render 'shared/error_messages', object: f.object %>
-      
-      <%= f.hidden_field :id %>
-
-      <%= f.label 'タイトル' %>
-      <%= f.text_field :title, class: 'form-control' %>
-
-      <%= f.label '本文' %>
-      <%= f.text_area :text, class: 'form-control', rows: '20' %>
-
-      <%=f.label "画像をアップロード" %>
-      <%= f.file_field :image %>
-      
-      <%= f.submit '投稿', class: "btn btn-primary" %>
-    <% end %>
-    
-  </div>
-</div>
+<%= render 'contents/form' %>
