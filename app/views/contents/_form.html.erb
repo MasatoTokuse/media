@@ -11,10 +11,10 @@
       <%= f.label '本文' %>
       <%= f.text_area :text, class: 'form-control', rows: '20' %>
 
-      <%=f.label "画像をアップロード" %>
+      <%=f.label '画像をアップロード' %>
       <%= f.file_field :image %>
       
-      <%= f.submit '投稿', class: "btn btn-primary" %>
+      <%= f.submit yield(:button_name), class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>

@@ -39,7 +39,13 @@ class ContentsController < ApplicationController
   end
 
   def destroy
-
+    @content = Content.find(params[:id])
+    if @content && @content.destroy
+      flash[:success] = "記事を削除しました"
+      redirect_to root_url
+    else
+      render 'show'
+    end
   end
 
     private
@@ -52,7 +58,7 @@ class ContentsController < ApplicationController
     # 記事が存在しない場合
     def not_exists_content
       unless Content.exists?(:id => params[:id])
-        redirect_to root_path
+        redirect_to root_url
       end
     end
 
