@@ -1,0 +1,13 @@
+<%= link_to(content) do %>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <%= content.title %>
+    </div>
+    <div class="panel-body">
+      <% if content.image.thumb.url %>
+        <%= image_tag content.image.thumb.url %>
+      <% end %>
+      <%= content.text.slice(0, 20) %>...
+    </div>
+  </div>
+<% end %>
