@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   patch '/post', to: 'contents#update'
   resources :users
   resources :contents
+  get '*path', controller: 'application', action: 'render_404'
 end
