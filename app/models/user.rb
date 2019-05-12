@@ -7,6 +7,8 @@ class User < ApplicationRecord
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
   has_secure_password
+  VALID_PASSWORD_REGEX = "(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{1,}"
+  INVALID_PASSWORD_MESSAGE = "数字、小文字アルファベット、大文字アルファベットをそれぞれ1文字以上含んでください"
   validates :password, presence: true, length: { minimum: 6 }
 end
 
