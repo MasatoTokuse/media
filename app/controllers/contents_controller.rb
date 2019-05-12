@@ -58,7 +58,7 @@ class ContentsController < ApplicationController
     # 記事が存在しない場合
     def not_exists_content
       unless Content.exists?(:id => params[:id])
-        redirect_to root_url
+        render_404
       end
     end
 
