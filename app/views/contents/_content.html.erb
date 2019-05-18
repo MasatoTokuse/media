@@ -1,13 +1,11 @@
 <%= link_to(content) do %>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <%= content.title %>
-    </div>
-    <div class="panel-body">
-      <% if content.image.thumb.url %>
-        <%= image_tag content.image.thumb.url %>
-      <% end %>
-      <%= content.text.slice(0, 20) %>...
+  <div class="card">
+    <% if content.image.thumb.url %>
+      <%= image_tag content.image.thumb.url, class: "card-img-top" %>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"><%= content.title %></h5>
+      <p class="card-text"><%= content.text.slice(0, 20) %>...</p>
     </div>
   </div>
 <% end %>
