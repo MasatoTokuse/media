@@ -1,13 +1,10 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-
 /* mixins, variables, etc. */
-$gray-medium-light: #eaeaea;
+$gray-medium-light:#eaeaea;
 $gray-darker:#222;
 $gray:#555;
 $gray-light:#777;
 $gray-superlight:#999;
-$main: #FDE875;
+$main:#FDE875;
 
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
@@ -88,7 +85,7 @@ header {
   a {
     color: black;
     &:hover {
-      color: black;
+      color: $gray-superlight;
     }
   }
 }
@@ -187,12 +184,12 @@ input {
   }
 }
 
-.field_with_errors {
-  @extend .has-error;
-  .form-control {
-    color: $state-danger-text;
-  }
-}
+// .field_with_errors {
+//   @extend .has-error;
+//   .form-control {
+//     color: $form-feedback-invalid-color;
+//   }
+// }
 
 /* content */
 .content {
