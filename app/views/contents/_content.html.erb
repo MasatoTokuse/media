@@ -3,7 +3,7 @@
     <% if content.image.thumb.url %>
       <%= image_tag content.image.thumb.url, class: "card-img-top" %>
     <% end %>
-    <div class="card-body">
+    <div class="card-body" style="height: <%= rand(7..10) %>rem;">
       <h5 class="card-title"><%= content.title %></h5>
       <p class="card-text"><%= content.text.slice(0, 20) %>...</p>
     </div>
