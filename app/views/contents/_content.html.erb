@@ -7,5 +7,6 @@
       <h5 class="card-title"><%= content.title %></h5>
       <p class="card-text"><%= content.text.slice(0, 20) %>...</p>
     </div>
+  <div class="card-footer"><%= content.created_at.to_s(:ago) %></div>
   </div>
 <% end %>
