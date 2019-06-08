@@ -1,3 +1,5 @@
 <% provide(:title, "List") %>
-<%= render @contents %>
-<%= will_paginate @contents %>
+<div class="card-columns">
+  <%= render @contents %>
+</div>
+<%= will_paginate @contents, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

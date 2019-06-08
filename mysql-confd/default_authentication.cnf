@@ -1,0 +1,3 @@
+# Mysql8.0 ではデフォルトの認証形式を mysql_native_password から caching_sha2_password に変更している。
+[mysqld]
+default_authentication_plugin= mysql_native_password

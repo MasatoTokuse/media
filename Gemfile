@@ -17,12 +17,13 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 
 # use bootstrap
-gem 'bootstrap-sass', '>= 3.3.7'
+gem 'bootstrap', '~> 4.3.1'
 
 # use jquery
 gem "jquery-rails"
+
 gem "will_paginate",  '3.1.6'
-gem "bootstrap-will_paginate",  '1.0.0'
+gem 'will_paginate-bootstrap4'
 
 # uploader
 gem 'carrierwave', '~> 1.0'
