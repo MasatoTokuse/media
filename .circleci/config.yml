@@ -6,6 +6,7 @@ jobs:
     steps:
       - checkout
       - run: docker-compose build
+      - run: docker pull mysql:8.0.15
       - run: docker-compose run --rm web rake db:create
       - run: docker-compose run --rm bnndle exec rails db:migrate
       - run: docker-compose run --rm web rails db:seed
