@@ -1,0 +1,13 @@
+version: 2
+jobs:
+  build:d:
+    machine: true
+    working_directory: /github.com/MasatoTokuse/media
+    steps:
+      - checkout
+      - run: docker-compose build
+      - run: docker-compose run --rm web rake db:create
+      - run: docker-compose run --rm bnndle exec rails db:migrate
+      - run: docker-compose run --rm web rails db:seed
+      - run: docker-compose up
+      - run: docker-compose run --rm web rails t
