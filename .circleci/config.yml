@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build:d:
+  build:
     machine: true
     working_directory: /github.com/MasatoTokuse/media
     steps:
