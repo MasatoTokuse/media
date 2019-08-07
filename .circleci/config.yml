@@ -1,14 +1,15 @@
 version: 2
 jobs:
   build:
-    machine: true
+    machine: image: circleci/classic:edge
     working_directory: ~/project
     steps:
       - checkout
       - run: docker-compose build
-      - run: docker pull mysql:8.0.15
-      - run: docker-compose run --rm web rake db:create
-      - run: docker-compose run --rm bnndle exec rails db:migrate
+      - run: docker-compose up -d
+      - run: sleep 1
+      - run: docker-compose run --rm web rails db:create
+      - run: docker-compose run --rm web rails db:migrate
       - run: docker-compose run --rm web rails db:seed
-      - run: docker-compose up
       - run: docker-compose run --rm web rails t
+      - run: docker-compose down
