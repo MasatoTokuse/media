@@ -8,8 +8,8 @@ jobs:
       - checkout
       - run: docker-compose build
       - run: docker-compose up -d
-      - run: sleep 10
-      - run: docker-compose run --rm web rake db:create
+      - run: sleep 60
+      - run: docker-compose run --rm web rails db:create
       - run: docker-compose run --rm web bundle exec rails db:migrate
       - run: docker-compose run --rm web rails db:seed
       - run: docker-compose run --rm web rails t
