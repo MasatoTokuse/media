@@ -75,4 +75,7 @@ yarn-debug.log*
 /storage/*
 !/storage/.keep
 
+# Ignore uproaded files
+/public/uploads
+
 # End of https://www.gitignore.io/api/rails
