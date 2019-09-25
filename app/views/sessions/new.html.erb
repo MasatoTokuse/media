@@ -1,13 +1,14 @@
 <% provide(:title, "Log in") %>
 <h1>ログイン</h1>
+<h2 class="comment">※サンプルアカウントが初期で入力されています。ぜひご利用ください。</h2>
 <div class="form-center">
   <%= form_for(:session, url:login_path) do |f| %>
 
     <%= f.label 'メールアドレス' %>
-    <%= f.email_field :email, class: 'form-control' %>
+    <%= f.email_field :email, class: 'form-control' ,value: 'masato@example.com'%>
 
     <%= f.label 'パスワード' %>
-    <%= f.password_field :password, class: 'form-control' %>
+    <%= f.password_field :password, class: 'form-control', value: 'foobar' %>
 
     <%= f.submit 'ログイン', class: "btn btn-primary" %>
   <% end %>
