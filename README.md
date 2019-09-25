@@ -17,6 +17,7 @@
 
 ## CI/CD
 `git push`するとCircleCIでビルドおよびテストします。
+
 テストにパスするとAWSのEC2インスタンスにデプロイします。
 
 ## URL
@@ -24,6 +25,7 @@ https://www.mst-tokuse-portfolio.com/
 
 ## アプリ概要
 WEB記事投稿サイトです。記事の投稿や閲覧ができます。
+
 機能確認用にサンプルアカウントを作成しております。
 ログイン画面にて初期入力されておりますので、ぜひご利用ください。
 
@@ -34,12 +36,3 @@ WEB記事投稿サイトです。記事の投稿や閲覧ができます。
 - 記事投稿機能(画像も可)
 - 記事編集機能
 - 記事削除機能
-
-## Quick Start on Docker
-```bash
-$ docker-compose build
-$ docker-compose run --rm web rails db:create
-$ docker-compose run --rm web rails db:migrate
-$ docker-compose run --rm web rails db:seed
-$ docker-compose up
-```
