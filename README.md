@@ -10,10 +10,10 @@
 - Docker
 - CircleCI
 - AWS
- - EC2
- - ELB
- - Route53(ドメインの登録)
- - Certificate Manager(証明書の発行)
+    - EC2
+    - ELB
+    - Route53(ドメインの登録)
+    - Certificate Manager(証明書の発行)
 
 ## CI/CD
 `git push`するとCircleCIでビルドおよびテストします。
