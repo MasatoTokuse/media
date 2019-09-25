@@ -21,7 +21,7 @@ jobs:
       - checkout
       # CicleCIに登録した秘密鍵を呼び出す
       - add_ssh_keys:
-      - run: ssh ${USER_NAME}@{HOST_NAME} 'cd app/media && git pull && docker-compose run --rm web rails db:migrate'
+      - run: ssh ${USER_NAME}@${HOST_NAME} 'cd app/media && git pull && docker-compose run --rm web rails db:migrate'
 # テストが成功した場合のみ、deployを実行するようにする
 workflows:
   version: 2
