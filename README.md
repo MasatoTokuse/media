@@ -4,6 +4,7 @@
 - Ruby:2.5.1
 - Rails:5.2.3
 - MySQL:8.0.15
+- nginx:1.15.8
 - bootstrap:4.3.1
 - will_paginate:3.1.6
 - carrierwave:1.0
