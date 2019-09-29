@@ -5,12 +5,12 @@ services:
     build: .
     environment:
       MYSQL_ROOT_PASSWORD: password
-    ports:
-      - "80:3000"
-    command: rails s -p 3000 -b '0.0.0.0'
+    command: rails s
     volumes:
       - .:/media
       - bundle:/usr/local/bundle
+      - public-data:/media/public
+      - tmp-data:/media/tmp
     depends_on:
       - db
   db:
@@ -22,6 +22,19 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
       - ./mysql-confd:/etc/mysql/conf.d
+  nginx:
+    build:
+      context: containers/nginx
+    volumes:
+      - public-data:/media/public
+      - tmp-data:/media/tmp
+      - ./containers/nginx/log:/var/log/nginx
+    ports:
+      - 80:80
+    depends_on:
+      - web
 volumes:
   bundle:
   mysql_data:
+  public-data:
+  tmp-data:

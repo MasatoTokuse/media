@@ -78,4 +78,7 @@ yarn-debug.log*
 # Ignore uproaded files
 /public/uploads
 
+# Ignore nginx log
+/containers/nginx/log
+
 # End of https://www.gitignore.io/api/rails
