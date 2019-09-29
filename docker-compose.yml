@@ -5,7 +5,9 @@ services:
     build: .
     environment:
       MYSQL_ROOT_PASSWORD: password
-    command: rails s
+    command: > 
+      bash -c "rm -f ./tmp/pids/* && 
+      rails s"
     volumes:
       - .:/media
       - bundle:/usr/local/bundle
