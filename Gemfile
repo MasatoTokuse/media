@@ -25,9 +25,6 @@ gem "jquery-rails"
 # pagenation
 gem 'kaminari'
 
-# gem "will_paginate",  '3.1.6'
-gem 'will_paginate-bootstrap4'
-
 # uploader
 gem 'carrierwave', '~> 1.0'
 gem 'rmagick'
