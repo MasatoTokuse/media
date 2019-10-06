@@ -18,7 +18,7 @@ class ContentsController < ApplicationController
 
   def index
     if Content.count > 0
-      @contents = Content.page(params[:page]).per(10)
+      @contents = Content.page(params[:page]).per(15)
     else
       render 'not_content'
     end
