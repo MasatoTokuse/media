@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run: docker-compose build
       - run: docker-compose up -d
-      - run: sleep 60
+      - run: sleep 30
       - run: docker-compose run --rm web rails db:create
       - run: docker-compose run --rm web rails db:migrate
       - run: docker-compose run --rm web rails db:seed
