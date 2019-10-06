@@ -2,4 +2,4 @@
 <div class="card-columns">
   <%= render @contents %>
 </div>
-<%= will_paginate @contents, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+<%= paginate @contents %>

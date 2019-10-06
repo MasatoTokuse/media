@@ -206,3 +206,12 @@ input {
   color: red;
   font-weight: bold;
 }
+
+/* pagination */
+.container {
+  padding: 0;
+}
+
+nav.pagination {
+  display: none;
+}

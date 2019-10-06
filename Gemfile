@@ -22,7 +22,10 @@ gem 'bootstrap', '~> 4.3.1'
 # use jquery
 gem "jquery-rails"
 
-gem "will_paginate",  '3.1.6'
+# pagenation
+gem 'kaminari'
+
+# gem "will_paginate",  '3.1.6'
 gem 'will_paginate-bootstrap4'
 
 # uploader
