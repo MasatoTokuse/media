@@ -22,8 +22,8 @@ gem 'bootstrap', '~> 4.3.1'
 # use jquery
 gem "jquery-rails"
 
-gem "will_paginate",  '3.1.6'
-gem 'will_paginate-bootstrap4'
+# pagenation
+gem 'kaminari'
 
 # uploader
 gem 'carrierwave', '~> 1.0'
