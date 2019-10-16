@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  web:
+  rails:
     build: .
     environment:
       MYSQL_ROOT_PASSWORD: password
@@ -32,7 +32,7 @@ services:
     ports:
       - 80:80
     depends_on:
-      - web
+      - rails
 volumes:
   bundle:
   mysql_data:
