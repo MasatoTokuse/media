@@ -19,8 +19,6 @@ services:
     image: mysql:8.0.15
     environment:
       MYSQL_ROOT_PASSWORD: password
-    ports:
-      - '3306:3306'
     volumes:
       - mysql_data:/var/lib/mysql
       - ./mysql-confd:/etc/mysql/conf.d
