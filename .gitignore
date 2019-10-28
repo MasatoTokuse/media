@@ -81,4 +81,7 @@ yarn-debug.log*
 # Ignore nginx log
 /containers/nginx/log
 
+# Ignore Cert
+/cert
+
 # End of https://www.gitignore.io/api/rails

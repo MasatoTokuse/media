@@ -3,6 +3,8 @@ version: '3'
 services:
   rails:
     build: .
+    env_file:
+      - env/rails.env
     environment:
       MYSQL_ROOT_PASSWORD: password
     command: > 
@@ -29,8 +31,11 @@ services:
       - public-data:/media/public
       - tmp-data:/media/tmp
       - ./containers/nginx/log:/var/log/nginx
+      - ./cert:/etc/mkcert/mst-tokuse-portfolio.com
+      - ./containers/nginx/conf.d:/etc/nginx/conf.d
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - rails
 volumes:
