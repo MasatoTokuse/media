@@ -6,6 +6,13 @@ jobs:
     working_directory: ~/project
     steps:
       - checkout
+      # TODO:暗号化したファイルをリポジトリからダウンロードし復号する
+      - run: mkdir env
+      - run: touch env/rails.env
+      - run: echo ${RAILS_ENV} >> env/rails.env
+      - run: touch env/mysql.env
+      - run: echo ${MYSQL_ROOT_USERNAME} >> env/mysql.env
+      - run: echo ${MYSQL_ROOT_PASSWORD} >> env/mysql.env
       - run: docker-compose build
       - run: docker-compose up -d
       - run: sleep 15
