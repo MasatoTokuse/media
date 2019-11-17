@@ -5,8 +5,7 @@ services:
     build: .
     env_file:
       - env/rails.env
-    environment:
-      MYSQL_ROOT_PASSWORD: password
+      - env/mysql.env
     command: > 
       bash -c "rm -f ./tmp/pids/* && 
       rails s"
@@ -19,8 +18,8 @@ services:
       - db
   db:
     image: mysql:8.0.15
-    environment:
-      MYSQL_ROOT_PASSWORD: password
+    env_file:
+      - env/mysql.env
     volumes:
       - mysql_data:/var/lib/mysql
       - ./mysql-confd:/etc/mysql/conf.d
