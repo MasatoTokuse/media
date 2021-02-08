@@ -26,7 +26,7 @@ gem "jquery-rails"
 gem 'kaminari'
 
 # uploader
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'rmagick'
 
 # Use CoffeeScript for .coffee assets and views
